@@ -17,3 +17,6 @@ knitr::opts_chunk$set(echo = TRUE)
 </div>
 
 <h3 style = "text-align-left"><strong>Introducción</strong></h3>
+<div align="justify">
+<p>En este trabajo se utilizarán las ecuaciones diferenciales ordinarias para modelar la propagación / sobrevivencia de las colonias de insectos. El estudio de los ciclos de vida de las colonias ha dado pie a la creencia de que la colonia, aparentemente, maximiza el número de insectos reproductores al final de la temporada. Lo anterior permite que la colonia esparza sus genes, propagando así a los de su tipo en una moda óptima.</p>
+</div>
