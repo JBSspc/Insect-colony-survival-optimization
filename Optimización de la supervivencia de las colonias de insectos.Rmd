@@ -23,6 +23,8 @@ knitr::opts_chunk$set(echo = TRUE)
 <p>Para estudiar las tazas de crecimiento de cada especie, se propone el siguiente modelo:</p></div>
 <div align = "center"><p>$\frac{dQ(t)}{dt}=b \cdot c \cdot (1-u(t)) \cdot R(t) \cdot W(t) - v \cdot Q(t)$ </br>$\frac{dW(t)}{dt}=b \cdot u(t) \cdot R(t) \cdot W(t) - \mu \cdot W(t)$
 </p></div>
-<div align = "justify"><p>Como condiciones iniciales, usamos $W(0) = 1$ y $Q(0) = 0$ debido a que consideramos a la abeja reina fundadora como una obrera, puesto que ella busca alimento para la primera cría.</p></div>
+<div align = "justify"><p>Como condiciones iniciales, usamos $W(0) = 1$ y $Q(0) = 0$ debido a que consideramos a la abeja reina fundadora como una obrera, puesto que ella busca alimento para la primera cría.</p>
+<p></p>
+</div>
 
 
