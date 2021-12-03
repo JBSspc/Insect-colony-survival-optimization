@@ -187,7 +187,18 @@ pre code {
 </h3>
 <div align="justify">
 <p>
-En este trabajo se utilizarán las ecuaciones diferenciales ordinarias para modelar la propagación / sobrevivencia de las colonias de insectos. El estudio de los ciclos de vida de las colonias ha dado pie a la creencia de que la colonia, aparentemente, maximiza el número de insectos reproductores al final de la temporada. Lo anterior permite que la colonia esparza sus genes, propagando así a los de su tipo en una moda óptima.
+En este trabajo se utilizarán las ecuaciones diferenciales ordinarias para modelar la propagación / sobrevivencia de las colonias de insectos. El estudio de los ciclos de vida de las colonias ha dado pie a la creencia de que la colonia, aparentemente, maximiza el número de insectos reproductores al final de la temporada. Lo anterior permite que la colonia esparza sus genes, propagando así a los de su tipo en una moda óptima. Pueden considerarse diferentes modelos para el estudio de insectos hibernantes y no hibernantes. Sin embargo, el caso de los no hibernantes es más complejo debio a la necesidad de construir recursos substanciales y colmenas para sobrevivir al invierno.
+</p>
+<p>
+A constinuación se considerará un modelo para una colinia en la que estudiamos dos tipos de insectos propios de la misma, obreros y reproductores (reinas). Sea <span class="math inline">\(W(t)\)</span> el número de insectos obreros en la colonia al tiempo <span class="math inline">\(t\)</span> (el cual se mide en días de la temporada), mientras que <span class="math inline">\(Q(t)\)</span> corresponde al número de insectos reproductores (reinas) en la colonia al tiempo <span class="math inline">\(t\)</span>. Para este estudio, no vamos a suponer ninguna distinción de clase de edad.
+</p>
+<p>
+Para estudiar las tazas de crecimiento de cada especie, se propone el siguiente modelo:
+</p>
+</div>
+<div align="center">
+<p>
+<span class="math inline">\(\frac{dQ(t)}{dt}=b \cdot c \cdot (1-u(t)) \cdot R(t) \cdot W(t) - v \cdot Q(t)\)</span> </br><span class="math inline">\(\frac{dW(t)}{dt}=b \cdot u(t) \cdot R(t) \cdot W(t) - \mu \cdot W(t)\)</span>
 </p>
 </div>
 
