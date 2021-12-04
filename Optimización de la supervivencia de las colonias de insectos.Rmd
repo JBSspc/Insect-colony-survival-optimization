@@ -27,4 +27,7 @@ knitr::opts_chunk$set(echo = TRUE)
 <p>Existe tamnién otra población a considerar: los zánganos. Éstos vienen de otras colmenas y son necesarios para fertilizar a las hembras. Una buena colmena durante la temporada de apareamiento puede tener entre 1 - 10 por ciento de zánganos que se reúnen diariamente en nubes que las reinas buscan para ser fecundadas. Las reinas se aparean con 5-20 zánganos y cada zángano muere después del apareamiento. Desafortunadamente, los zánganos no hacen otra cosa que comer miel. No recogen recursos, no defienden, no hacen cera ni cuidan de las crías. Normalmente, todos los zánganos son expulsados de la colmena al final de la temporada. Por lo tanto, en nuestro modelo, no los consideramos.</p>
 </div>
 
+<h5 style ="text-align-left"><strong> Descripción de las variables: </strong></h5>
+
+
 
