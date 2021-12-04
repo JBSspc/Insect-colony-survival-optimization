@@ -24,7 +24,8 @@ knitr::opts_chunk$set(echo = TRUE)
 <div align = "center"><p>$\frac{dQ(t)}{dt}=b \cdot c \cdot (1-u(t)) \cdot R(t) \cdot W(t) - v \cdot Q(t)$ </br>$\frac{dW(t)}{dt}=b \cdot u(t) \cdot R(t) \cdot W(t) - \mu \cdot W(t)$
 </p></div>
 <div align = "justify"><p>Como condiciones iniciales, usamos $W(0) = 1$ y $Q(0) = 0$ debido a que consideramos a la abeja reina fundadora como una obrera, puesto que ella busca alimento para la primera cría.</p>
-<p></p>
+<p>Existe tamnién otra población a considerar: los zánganos. Éstos vienen de otras colmenas y son necesarios para fertilizar a las hembras. Una buena colmena durante la temporada de apareamiento puede tener entre 1 - 10 por ciento de zánganos que se reúnen diariamente en nubes que las reinas buscan para ser fecundadas. Las reinas se aparean con 5-20 zánganos y cada zángano muere después del apareamiento.  </p>
+<p> Desafortunadamente, los zánganos no hacen otra cosa que comer miel. No recogen recursos, no defienden, no hacen cera ni cuidan de las crías. Normalmente, todos los zánganos son expulsados de la colmena al final de la temporada. Por lo tanto, en nuestro modelo, no los consideramos.
 </div>
 
 
