@@ -214,6 +214,10 @@ Existe tamnién otra población a considerar: los zánganos. Éstos vienen de ot
 <strong> Descripción de las variables: </strong>
 </h5>
 <table>
+<colgroup>
+<col width="41%" />
+<col width="58%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="center">Variable</th>
@@ -223,11 +227,27 @@ Existe tamnién otra población a considerar: los zánganos. Éstos vienen de ot
 <tbody>
 <tr class="odd">
 <td align="center"><span class="math inline">\(R(t)\)</span></td>
-<td align="left">Función de retorno</td>
+<td align="left">Es la función de retorno (por unidad de miembro de la colonia) que representa la abundancia de recursos y la capacidad de forrajeo de la colonia en el momento t. La abundancia de recursos es muy importante para las abejas melíferas y no es en absoluto una constante. Se trata, pues, de una primera aproximación. Puede ser una medida de la diversidad floral en el caso de una colonia de abejas. A menudo se puede suponer que es constante, pero los modelos son bastante robustos y se aplican cuando <span class="math inline">\(R(t)\)</span> refleja más los cambios más amplios del ecosistema.</td>
 </tr>
 <tr class="even">
 <td align="center"><span class="math inline">\(-\mu W(t)\)</span></td>
-<td align="left">Decaimiento</td>
+<td align="left">Es un término de decaimiento exponencial que dice que, en ausencia de cualquier entrada de energía <span class="math inline">\((R(t))\)</span>, la población de obreras morirá.</td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(u(t)\)</span></td>
+<td align="left">Es el porcentaje de utilización (entre 0 y 1) que la colonia aplica a la producción de las obreras. Volviendo a la ecuación de <span class="math inline">\(Q(t)\)</span> vemos que <span class="math inline">\((1 - u(t))\)</span> representa entonces la parte (entre 0 y 1) del recurso que la colonia aplica a la producción de reproductores (reinas).</td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(b\)</span></td>
+<td align="left">Significa un factor de conversión de la biomasa, es decir, de la energía del recurso, cuánto se convierte realmente en insectos trabajadores por unidad de tiempo.</td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(c\)</span></td>
+<td align="left">representa un factor de conversión diferencial, es decir, si <span class="math inline">\(c &gt; 1\)</span> se necesita más energía para producir un insecto reproductor que para producir un insecto trabajador y si <span class="math inline">\(c = 1\)</span> la energía necesaria para producir un insecto trabajador y uno reproductor es la misma. A menudo se asume este último caso. Mientras que para producir una reina se necesita más energía, por ejemplo, más cera para la célula (más grande) y más jalea real (probablemente el doble), para una reina es más grande, tanto como el doble de un insecto obrero. Pero la energía no es mucha en ambos casos.</td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(-vQ(t)\)</span></td>
+<td align="left">Representa la decadencia exponencial de la población de reproductores en ausencia de otros aportes de energía. Nota: En el caso de las abejas melíferas, la población reproductora es básicamente de 1 ó 2. Producen varias reinas al mismo tiempo (de 2 a 8 aproximadamente) cuando se preparan para enjambrar. Pero las reinas “luchan” y sólo una sobrevive. No se sabe por qué hacen esto, pero se cree que es para gestionar el riesgo, ya que deben tener una (pero no más) que sobreviva o la colmena morirá. Esto se debe a que la madre de estas reinas suele salir en un enjambre una semana antes de este evento. Por lo tanto, tienes dos reinas supervivientes, una en casa y otra que se ha ido para empezar una nueva colmena. Esto puede repetirse varias veces en una temporada, por lo que puede haber hasta 4 reinas supervivientes (3 enjambres) al final de la temporada.</td>
 </tr>
 </tbody>
 </table>
