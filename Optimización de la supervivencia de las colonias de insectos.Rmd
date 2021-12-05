@@ -44,7 +44,8 @@ knitr::opts_chunk$set(echo = TRUE)
 <div align = "justify">Consideremos estos valores de los parámetros: $b = 0.0013$, $c = 1$, $\mu= 0.022$, $v = 0.005$, $T = 205$ días y $R(t) = 50$. Recordemos que $u(t)$ es una función (en este caso, llamada función de control admisible, en realidad) que está entre 0 y 1, donde $u(t) = 0$, significa que en el tiempo $t$ la colonia pone el 0% de sus energías en la producción de obreras; $u(t) = 1$, significa que en el tiempo $t$ la colonia pone el $100%$ de sus energías en la producción de obreras; y, por ejemplo, $u(140) = 0.31$, significa que en el tiempo $t= 140$ la colonia pone el $31%$ de sus energías en la producción de obreras.</div>
 
 
-<h3 style = "text-align-left"><strong>Análisis y resultados</strong></h3></br>
+<h3 style = "text-align-left"><strong>Metodología</strong></h3></br>
+<div align="justify">Para el presente trabajo, primero probaremos el modelo propuesto en $(1)$, usando diferentes $u(t)$. Para ello, primeramente graficaremos cada $u(t)$ en el intervalo $[0, 205]$. En segundo lugar, describiremos el comportamiento de la colonia. A continuación, calcularemos el número de insectos reina al final de la temporada y graficaremos ambos $Q(t)$ y $W(t)$ en el intervalo $[0, 205]$ - con variables identificadas. Posteriormente, propondremos una estrategia diferente, la cual modelaremos con una función $u(t)$. Finalmente, analizaremos nuestra propuesta de la misma forma que se hizó con el modelo propuesto por el profesor. </div>
 
 
 
