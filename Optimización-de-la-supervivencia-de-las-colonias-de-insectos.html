@@ -279,8 +279,30 @@ Para el presente trabajo, primero probaremos el modelo propuesto en <span class=
 </div>
 <p></br></p>
 <div align="justify">
+<p>
 Se pasa de no criar ninguna reina a criar unas pocas. Sin embargo, hay demasiadas abejas para que dediquen toda su energía a criar reinas. Sólo se necesitan unas pocas abejas para criar reinas, digamos de 5 a 100 de 50.000. Probablemente se deba a la velocidad a la que una obrera puede producir jalea real y a la cantidad que necesita una reina. El resto de las abejas se ocupan de recoger más néctar, fabricar celdas de cera, rechazar a los intrusos, recoger polen, limpiar la colmena, etc. Así, otro modelo podría considerar que hay dos niveles de <span class="math inline">\(u(t)\)</span>: bajo <span class="math inline">\((u(t) = 0)\)</span> y alto <span class="math inline">\((u(t)0.0001\cdot W)\)</span>. Puede ser que la energía para hacer una reina no sea un gran problema. Tiene que ver más con el número de abejas, el inventario de miel, el inventario de crías, los niveles de recursos naturales, la temporada (se necesitan muchos zánganos de otras colmenas), la temperatura, etc. Ahora, ¿podemos determinar un tiempo de cambio óptimo t, cuando la colonia debe pasar de producir todos los insectos obreros <span class="math inline">\((u(t) = 1\)</span> para <span class="math inline">\(t&lt; t_{s}\)</span>, por lo que <span class="math inline">\(u(t) = 1 - UnitStep[t -t_{s}])\)</span> a producir todos los reproductores (reinas) <span class="math inline">\((u(t) = 0\)</span> para <span class="math inline">\(t&gt; t_{s})\)</span>?
+</p>
+<p>
+<ol style="list-style-type: lower-alpha">
+<li>Muestre cómo es la curva de <span class="math inline">\(Q(T = 205)\)</span> frente a <span class="math inline">\(t_{s}\)</span>. Es decir, pruebe una serie de tiempos de conmutación, <span class="math inline">\(t_{s}\)</span> en el intervalo de tiempo <span class="math inline">\([0, 205]\)</span> (en un rango amplio y en un rango estrecho sobre su valor óptimo, recoja los puntos de datos resultantes <span class="math inline">\((t_{s}, Q(205))\)</span> en un conjunto, llamado datos, y grafique estos puntos para ver cuál podría ser un tiempo de conmutación óptimo.</li>
+<li>Utilizando el tiempo de conmutación óptimo de la colonia que has descubierto en <span class="math inline">\((3)\)</span>, muestra cómo se compara con todos los resultados de la sección Modelo - ¡prueba! anterior y con tu propia estrategia en <span class="math inline">\((2)\)</span>.
+</p>
+</br>
 </div>
+<div align="justify">
+<p>
+Explore el efecto en nuestra estrategia de optimización de <span class="math inline">\((3)\)</span> si cambiamos nuestro valor de <span class="math inline">\(c\)</span> - recuerde cuál es el significado de c - vea arriba. Por ejemplo, supongamos que cambiamos nuestro problema de <span class="math inline">\(c = 1\)</span> a, digamos, <span class="math inline">\(c = 2\)</span>, o <span class="math inline">\(c= \frac{1}{2}\)</span> (asegúrese de explicar lo que cada uno de estos significa en términos de la colonia y el modelo) entonces, ¿qué efecto tienen estos cambios en nuestro tiempo de conmutación óptima?
+</p>
+</br>
+<p>
+Explore el efecto en nuestra estrategia de optimización de <span class="math inline">\((3)\)</span> si cambiamos nuestra función <span class="math inline">\(R(t)\)</span> para modelar más estrechamente la disponibilidad de recursos tal y como se modela en la función de retorno estacional (en este caso 205 días desde principios de primavera hasta finales de otoño). Proponga una función para <span class="math inline">\(R(t)\)</span> que sea diferente de <span class="math inline">\(R(t) = 50\)</span>, que cree que podría ser un modelo de recursos estacionales. A continuación, compare los resultados de su modelo con los de <span class="math inline">\((3)\)</span>. Explique las diferencias o similitudes.
+</p>
+</br>
+<p>
+Se sabe que algunas especies (por ejemplo, las abejas) forman enjambres o se levantan y abandonan la colmena, ya que los reproductores inician nuevas colonias en mitad de la temporada. Modele este comportamiento con los parámetros, <span class="math inline">\(b= 0,0013\)</span>, <span class="math inline">\(c = 1\)</span>, <span class="math inline">\(\mu = 0,022\)</span>, <span class="math inline">\(v = 0,005\)</span>, <span class="math inline">\(T = 205- días\)</span>, y <span class="math inline">\(R(t) = 50\)</span>. A continuación, compare esto con sus resultados (es decir, el número de reproductores disponibles al final de la temporada) en su tiempo de cambio óptimo descubierto en la sección Solución bang-bang anterior. Haz las suposiciones adicionales que necesites.
+</p>
+</div></li>
+</ol>
 
 
 
