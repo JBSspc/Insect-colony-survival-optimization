@@ -55,6 +55,8 @@ b) Utilizando el tiempo de conmutación óptimo de la colonia que has descubiert
 <p>Explore el efecto en nuestra estrategia de optimización de $(3)$ si cambiamos nuestra función $R(t)$ para modelar más estrechamente la disponibilidad de recursos tal y como se modela en la función de retorno estacional (en este caso 205 días desde principios de primavera hasta finales de otoño). Proponga una función para $R(t)$ que sea diferente de $R(t) = 50$, que cree que podría ser un modelo de recursos estacionales. A continuación, compare los resultados de su modelo con los de $(3)$. Explique las diferencias o similitudes.</p></br>
 <p>Se sabe que algunas especies (por ejemplo, las abejas) forman enjambres o se levantan y abandonan la colmena, ya que los reproductores inician nuevas colonias en mitad de la temporada. Modele este comportamiento con los parámetros, $b= 0,0013$, $c = 1$, $\mu = 0,022$, $v = 0,005$, $T = 205- días$, y $R(t) = 50$. A continuación, compare esto con sus resultados (es decir, el número de reproductores disponibles al final de la temporada) en su tiempo de cambio óptimo descubierto en la sección Solución bang-bang anterior. Haz las suposiciones adicionales que necesites.</p></div>
 
+<h3 style = "text-align-left"><strong>Resultados</strong></h3></br>
+
 
 
 
