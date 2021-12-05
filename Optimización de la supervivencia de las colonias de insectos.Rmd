@@ -3,8 +3,8 @@ title: "Optimización de la supervivencia de las colonias de insectos"
 author: "Sofía Palacios Cuevas, Martín Morales Trejo"
 date: "Diciembre 07, 2021"
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -16,7 +16,7 @@ knitr::opts_chunk$set(echo = TRUE)
 <p></p>
 <p></p>
 <p></p>
-</div>
+</div></br>
 
 <h3 style = "text-align-left"><strong>Introducción</strong></h3>
 <div align="justify">
