@@ -3,8 +3,8 @@ title: "Optimización de la supervivencia de las colonias de insectos"
 author: "Sofía Palacios Cuevas, Martín Morales Trejo"
 date: "Diciembre 07, 2021"
 output:
-  html_document: default
   pdf_document: default
+  html_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -58,7 +58,34 @@ b) Utilizando el tiempo de conmutación óptimo de la colonia que has descubiert
 <p>Se sabe que algunas especies (por ejemplo, las abejas) forman enjambres o se levantan y abandonan la colmena, ya que los reproductores inician nuevas colonias en mitad de la temporada. Modele este comportamiento con los parámetros, $b= 0,0013$, $c = 1$, $\mu = 0,022$, $v = 0,005$, $T = 205- días$, y $R(t) = 50$. A continuación, compare esto con sus resultados (es decir, el número de reproductores disponibles al final de la temporada) en su tiempo de cambio óptimo descubierto en la sección Solución bang-bang anterior. Haz las suposiciones adicionales que necesites.</p></div>
 
 <h2 style = "text-align-left">**Resultados**</h2></br>
-<div align = "justify"><p>Para cada $u(t)$ se obtuvieron las siguientes gráficas de $W(t)$ y $Q(t)$ en el intervalo de tiempo $t = [0, 205]$:</p></div>
+<div align = "justify">De las $u(t)$ propuestas, se obtuvieron las siguientes gráficas al evaluar las funciones en el intervalo $t = [0, 205]$:</div>
+
+<center>
+
+![$u_{1}$](C:/Users/sofia/OneDrive/Documentos/EDO/u1.png)
+
+</center>
+
+<div align = "justify"> En este caso, podemos ver que...COMPLETAR </div>
+
+<center>
+
+![$u_{2}$](C:/Users/sofia/OneDrive/Documentos/EDO/2.png)
+
+</center>
+
+<div align = "justify"> En este caso, podemos ver que...COMPLETAR </div>
+
+<center>
+
+![$u_{3}$](C:/Users/sofia/OneDrive/Documentos/EDO/u3.png)
+
+</center>
+
+<div align = "justify"> En este caso, podemos ver que...COMPLETAR </div>
+
+
+<div align = "justify">Para cada $u(t)$ se obtuvieron las siguientes gráficas de $W(t)$ y $Q(t)$ en el intervalo de tiempo $t = [0, 205]$:</div>
 <center>
 
 ![Modelo OSCI con $u_{1}$](C:/Users/sofia/OneDrive/Documentos/EDO/w_Q_u1.png)
