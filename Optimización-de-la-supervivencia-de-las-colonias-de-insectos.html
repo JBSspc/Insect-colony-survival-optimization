@@ -276,34 +276,47 @@ Consideremos estos valores de los parámetros: <span class="math inline">\(b = 0
 </h2>
 </br>
 <div align="justify">
-Para el presente trabajo, primero probaremos el modelo propuesto en <span class="math inline">\((1)\)</span>, usando diferentes <span class="math inline">\(u(t)\)</span>. Para ello, primeramente graficaremos cada <span class="math inline">\(u(t)\)</span> en el intervalo <span class="math inline">\([0, 205]\)</span>. En segundo lugar, describiremos el comportamiento de la colonia. A continuación, calcularemos el número de insectos reina al final de la temporada y graficaremos ambos <span class="math inline">\(Q(t)\)</span> y <span class="math inline">\(W(t)\)</span> en el intervalo <span class="math inline">\([0, 205]\)</span> - con variables identificadas. Posteriormente, propondremos una estrategia diferente, la cual modelaremos con una función <span class="math inline">\(u(t)\)</span>. Finalmente, analizaremos nuestra propuesta de la misma forma que se hizo con el modelo propuesto por el profesor.
+<ol style="list-style-type: decimal">
+<li>Probaremos el modelo propuesto en <span class="math inline">\((1)\)</span>, usando diferentes <span class="math inline">\(u(t)\)</span>. Para ello, primeramente graficaremos cada <span class="math inline">\(u(t)\)</span> en el intervalo <span class="math inline">\([0, 205]\)</span>. En segundo lugar, describiremos el comportamiento de la colonia. A continuación, calcularemos el número de insectos reina al final de la temporada y graficaremos ambos <span class="math inline">\(Q(t)\)</span> y <span class="math inline">\(W(t)\)</span> en el intervalo <span class="math inline">\([0, 205]\)</span> - con variables identificadas.
 </div>
-<p></br></p>
+<div align="justify">
+<ol start="2" style="list-style-type: decimal">
+<li>Propondremos una estrategia diferente, la cual modelaremos con una función <span class="math inline">\(u(t)\)</span>.
+</div>
+<div align="justify">
+<ol start="3" style="list-style-type: decimal">
+<li>Analizaremos nuestra propuesta de la misma forma que se hizo con el modelo propuesto por el profesor.
+</div></li>
+</ol></li>
+</ol></li>
+</ol>
 <div align="justify">
 <p>
 Se pasa de no criar ninguna reina a criar unas pocas. Sin embargo, hay demasiadas abejas para que dediquen toda su energía a criar reinas. Sólo se necesitan unas pocas abejas para criar reinas, digamos de 5 a 100 de 50.000. Probablemente se deba a la velocidad a la que una obrera puede producir jalea real y a la cantidad que necesita una reina. El resto de las abejas se ocupan de recoger más néctar, fabricar celdas de cera, rechazar a los intrusos, recoger polen, limpiar la colmena, etc. Así, otro modelo podría considerar que hay dos niveles de <span class="math inline">\(u(t)\)</span>: bajo <span class="math inline">\((u(t) = 0)\)</span> y alto <span class="math inline">\((u(t)0.0001\cdot W)\)</span>. Puede ser que la energía para hacer una reina no sea un gran problema. Tiene que ver más con el número de abejas, el inventario de miel, el inventario de crías, los niveles de recursos naturales, la temporada (se necesitan muchos zánganos de otras colmenas), la temperatura, etc. Ahora, ¿podemos determinar un tiempo de cambio óptimo t, cuando la colonia debe pasar de producir todos los insectos obreros <span class="math inline">\((u(t) = 1\)</span> para <span class="math inline">\(t&lt; t_{s}\)</span>, por lo que <span class="math inline">\(u(t) = 1 - UnitStep[t -t_{s}])\)</span> a producir todos los reproductores (reinas) <span class="math inline">\((u(t) = 0\)</span> para <span class="math inline">\(t&gt; t_{s})\)</span>?
 </p>
 <p>
 <ol style="list-style-type: lower-alpha">
-<li>Muestre cómo es la curva de <span class="math inline">\(Q(T = 205)\)</span> frente a <span class="math inline">\(t_{s}\)</span>. Es decir, pruebe una serie de tiempos de conmutación, <span class="math inline">\(t_{s}\)</span> en el intervalo de tiempo <span class="math inline">\([0, 205]\)</span> (en un rango amplio y en un rango estrecho sobre su valor óptimo, recoja los puntos de datos resultantes <span class="math inline">\((t_{s}, Q(205))\)</span> en un conjunto, llamado datos, y grafique estos puntos para ver cuál podría ser un tiempo de conmutación óptimo.</li>
-<li>Utilizando el tiempo de conmutación óptimo de la colonia que has descubierto en <span class="math inline">\((3)\)</span>, muestra cómo se compara con todos los resultados de la sección Modelo - ¡prueba! anterior y con tu propia estrategia en <span class="math inline">\((2)\)</span>.
+<li>Mostraremos cómo es la curva de <span class="math inline">\(Q(T = 205)\)</span> frente a <span class="math inline">\(t_{s}\)</span>. Es decir, probaremos una serie de tiempos de conmutación, <span class="math inline">\(t_{s}\)</span> en el intervalo de tiempo <span class="math inline">\([0, 205]\)</span> (en un rango amplio y en un rango estrecho sobre su valor óptimo, recojeremos los puntos de datos resultantes <span class="math inline">\((t_{s}, Q(205))\)</span> en un conjunto, llamado datos, y graficaremos estos puntos para ver cuál podría ser un tiempo de conmutación óptimo.</li>
+<li>Utilizando el tiempo de conmutación óptimo de la colonia que se obtenga en <span class="math inline">\((3)\)</span>, mostraremos cómo se compara con todos los resultados de la sección 1 anterior y con nuestra propia estrategia en <span class="math inline">\((2)\)</span>.
 </p>
 </br>
 </div></li>
 </ol>
 <div align="justify">
-<p>
-Explore el efecto en nuestra estrategia de optimización de <span class="math inline">\((3)\)</span> si cambiamos nuestro valor de <span class="math inline">\(c\)</span> - recuerde cuál es el significado de c - vea arriba. Por ejemplo, supongamos que cambiamos nuestro problema de <span class="math inline">\(c = 1\)</span> a, digamos, <span class="math inline">\(c = 2\)</span>, o <span class="math inline">\(c= \frac{1}{2}\)</span> (asegúrese de explicar lo que cada uno de estos significa en términos de la colonia y el modelo) entonces, ¿qué efecto tienen estos cambios en nuestro tiempo de conmutación óptima?
-</p>
-</br>
-<p>
-Explore el efecto en nuestra estrategia de optimización de <span class="math inline">\((3)\)</span> si cambiamos nuestra función <span class="math inline">\(R(t)\)</span> para modelar más estrechamente la disponibilidad de recursos tal y como se modela en la función de retorno estacional (en este caso 205 días desde principios de primavera hasta finales de otoño). Proponga una función para <span class="math inline">\(R(t)\)</span> que sea diferente de <span class="math inline">\(R(t) = 50\)</span>, que cree que podría ser un modelo de recursos estacionales. A continuación, compare los resultados de su modelo con los de <span class="math inline">\((3)\)</span>. Explique las diferencias o similitudes.
-</p>
-</br>
-<p>
-Se sabe que algunas especies (por ejemplo, las abejas) forman enjambres o se levantan y abandonan la colmena, ya que los reproductores inician nuevas colonias en mitad de la temporada. Modele este comportamiento con los parámetros, <span class="math inline">\(b= 0,0013\)</span>, <span class="math inline">\(c = 1\)</span>, <span class="math inline">\(\mu = 0,022\)</span>, <span class="math inline">\(v = 0,005\)</span>, <span class="math inline">\(T = 205- días\)</span>, y <span class="math inline">\(R(t) = 50\)</span>. A continuación, compare esto con sus resultados (es decir, el número de reproductores disponibles al final de la temporada) en su tiempo de cambio óptimo descubierto en la sección Solución bang-bang anterior. Haz las suposiciones adicionales que necesites.
-</p>
+<ol start="4" style="list-style-type: decimal">
+<li>Exploraremos el efecto en nuestra estrategia de optimización de <span class="math inline">\((3)\)</span> si cambiamos nuestro valor de <span class="math inline">\(c\)</span> - recuerde cuál es el significado de c - vea arriba. Por ejemplo, supongamos que cambiamos nuestro problema de <span class="math inline">\(c = 1\)</span> a, digamos, <span class="math inline">\(c = 2\)</span>, o <span class="math inline">\(c= \frac{1}{2}\)</span> (nos aseguraremos de explicar lo que cada uno de estos significa en términos de la colonia y el modelo) entonces, ¿qué efecto tienen estos cambios en nuestro tiempo de conmutación óptima?
 </div>
+<div align="justify">
+<ol start="5" style="list-style-type: decimal">
+<li>Exploraremos el efecto en nuestra estrategia de optimización de <span class="math inline">\((3)\)</span> si cambiamos nuestra función <span class="math inline">\(R(t)\)</span> para modelar más estrechamente la disponibilidad de recursos tal y como se modela en la función de retorno estacional (en este caso 205 días desde principios de primavera hasta finales de otoño). Propondremos una función para <span class="math inline">\(R(t)\)</span> que sea diferente de <span class="math inline">\(R(t) = 50\)</span>, que creamos que podría ser un modelo de recursos estacionales. A continuación, compararemos los resultados de nuestro modelo con los de <span class="math inline">\((3)\)</span>. Explicaremos las diferencias o similitudes.
+</div>
+<div align="justify">
+<ol start="6" style="list-style-type: decimal">
+<li>Se sabe que algunas especies (por ejemplo, las abejas) forman enjambres o se levantan y abandonan la colmena, ya que los reproductores inician nuevas colonias en mitad de la temporada. Modele este comportamiento con los parámetros, <span class="math inline">\(b= 0,0013\)</span>, <span class="math inline">\(c = 1\)</span>, <span class="math inline">\(\mu = 0,022\)</span>, <span class="math inline">\(v = 0,005\)</span>, <span class="math inline">\(T = 205- días\)</span>, y <span class="math inline">\(R(t) = 50\)</span>. A continuación, compararemos esto con nuestros resultados (es decir, el número de reproductores disponibles al final de la temporada) en su tiempo de cambio óptimo descubierto en la sección 3 anterior. Haremos las suposiciones adicionales necesarias.
+</div></li>
+</ol></li>
+</ol></li>
+</ol>
 <h2 style="text-align-left">
 <strong>Resultados</strong>
 </h2>
