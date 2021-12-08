@@ -18,7 +18,7 @@ knitr::opts_chunk$set(echo = TRUE)
 <p></p>
 </div></br>
 
-<h3 style = "text-align-left"><strong>Introducción</strong></h3>
+<h2 style = "text-align-left">**Introducción**</h2>
 <div align="justify">
 <p>En este trabajo se utilizarán las ecuaciones diferenciales ordinarias para modelar la propagación / sobrevivencia de las colonias de insectos. El estudio de los ciclos de vida de las colonias ha dado pie a la creencia de que la colonia, aparentemente, maximiza el número de insectos reproductores al final de la temporada. Lo anterior permite que la colonia esparza sus genes, propagando así a los de su tipo en una moda óptima. Pueden considerarse diferentes modelos para el estudio de insectos hibernantes y no hibernantes. Sin embargo, el caso de los no hibernantes es más complejo debio a la necesidad de construir recursos substanciales y colmenas para sobrevivir al invierno.</p>
 <p>A constinuación se considerará un modelo para una colinia en la que estudiamos dos tipos de insectos propios de la misma, obreros y reproductores (reinas). Sea $W(t)$ el número de insectos obreros en la colonia al tiempo $t$ (el cual se mide en días de la temporada), mientras que $Q(t)$ corresponde al número de insectos reproductores (reinas) en la colonia al tiempo $t$. Para este estudio, no vamos a suponer ninguna distinción de clase de edad.</p>
@@ -46,7 +46,7 @@ knitr::opts_chunk$set(echo = TRUE)
 <div align = "justify">Consideremos estos valores de los parámetros: $b = 0.0013$, $c = 1$, $\mu= 0.022$, $v = 0.005$, $T = 205$ días y $R(t) = 50$. Recordemos que $u(t)$ es una función (en este caso, llamada función de control admisible, en realidad) que está entre 0 y 1, donde $u(t) = 0$, significa que en el tiempo $t$ la colonia pone el 0% de sus energías en la producción de obreras; $u(t) = 1$, significa que en el tiempo $t$ la colonia pone el $100%$ de sus energías en la producción de obreras; y, por ejemplo, $u(140) = 0.31$, significa que en el tiempo $t= 140$ la colonia pone el $31%$ de sus energías en la producción de obreras.</div>
 
 
-<h3 style = "text-align-left"><strong>Metodología</strong></h3></br>
+<h2 style = "text-align-left">**Metodología**</h2></br>
 <div align="justify">Para el presente trabajo, primero probaremos el modelo propuesto en $(1)$, usando diferentes $u(t)$. Para ello, primeramente graficaremos cada $u(t)$ en el intervalo $[0, 205]$. En segundo lugar, describiremos el comportamiento de la colonia. A continuación, calcularemos el número de insectos reina al final de la temporada y graficaremos ambos $Q(t)$ y $W(t)$ en el intervalo $[0, 205]$ - con variables identificadas. Posteriormente, propondremos una estrategia diferente, la cual modelaremos con una función $u(t)$. Finalmente, analizaremos nuestra propuesta de la misma forma que se hizo con el modelo propuesto por el profesor. </div></br>
 
 <div align ="justify"><p>Se pasa de no criar ninguna reina a criar unas pocas. Sin embargo, hay demasiadas abejas para que dediquen toda su energía a criar reinas. Sólo se necesitan unas pocas abejas para criar reinas, digamos de 5 a 100 de 50.000. Probablemente se deba a la velocidad a la que una obrera puede producir jalea real y a la cantidad que necesita una reina. El resto de las abejas se ocupan de recoger más néctar, fabricar celdas de cera, rechazar a los intrusos, recoger polen, limpiar la colmena, etc. Así, otro modelo podría considerar que hay dos niveles de $u(t)$: bajo $(u(t) = 0)$ y alto $(u(t)0.0001\cdot W)$. Puede ser que la energía para hacer una reina no sea un gran problema. Tiene que ver más con el número de abejas, el inventario de miel, el inventario de crías, los niveles de recursos naturales, la temporada (se necesitan muchos zánganos de otras colmenas), la temperatura, etc. Ahora, ¿podemos determinar un tiempo de cambio óptimo t, cuando la colonia debe pasar de producir todos los insectos obreros $(u(t) = 1$ para $t< t_{s}$, por lo que $u(t) = 1 - UnitStep[t -t_{s}])$ a producir todos los reproductores (reinas) $(u(t) = 0$ para $t> t_{s})$?</p>
@@ -57,10 +57,27 @@ b) Utilizando el tiempo de conmutación óptimo de la colonia que has descubiert
 <p>Explore el efecto en nuestra estrategia de optimización de $(3)$ si cambiamos nuestra función $R(t)$ para modelar más estrechamente la disponibilidad de recursos tal y como se modela en la función de retorno estacional (en este caso 205 días desde principios de primavera hasta finales de otoño). Proponga una función para $R(t)$ que sea diferente de $R(t) = 50$, que cree que podría ser un modelo de recursos estacionales. A continuación, compare los resultados de su modelo con los de $(3)$. Explique las diferencias o similitudes.</p></br>
 <p>Se sabe que algunas especies (por ejemplo, las abejas) forman enjambres o se levantan y abandonan la colmena, ya que los reproductores inician nuevas colonias en mitad de la temporada. Modele este comportamiento con los parámetros, $b= 0,0013$, $c = 1$, $\mu = 0,022$, $v = 0,005$, $T = 205- días$, y $R(t) = 50$. A continuación, compare esto con sus resultados (es decir, el número de reproductores disponibles al final de la temporada) en su tiempo de cambio óptimo descubierto en la sección Solución bang-bang anterior. Haz las suposiciones adicionales que necesites.</p></div>
 
-<h3 style = "text-align-left"><strong>Resultados</strong></h3></br>
+<h2 style = "text-align-left">**Resultados**</h2></br>
 <div align = "justify"><p>Para cada $u(t)$ se obtuvieron las siguientes gráficas de $W(t)$ y $Q(t)$ en el intervalo de tiempo $t = [0, 205]$:</p></div>
+<center>
+
 ![Modelo OSCI con $u_{1}$](C:/Users/sofia/OneDrive/Documentos/EDO/w_Q_u1.png)
+
+</center>
+<div align = "justify"> En este caso, podemos ver que...COMPLETAR </div>
+
+<center>
+
 ![Modelo OSCI con $u_{2}$](C:/Users/sofia/OneDrive/Documentos/EDO/W_Q_u2.png)
+
+</center>
+
+<div align = "justify"> En este caso, podemos ver que...COMPLETAR </div>
+
+<center>
+
 ![Modelo OSCI con $u_{3}$](C:/Users/sofia/OneDrive/Documentos/EDO/W_Q_u3.png)
 
+</center>
 
+<div align = "justify"> En este caso, podemos ver que...COMPLETAR </div>
