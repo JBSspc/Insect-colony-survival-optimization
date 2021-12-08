@@ -58,9 +58,9 @@ b) Utilizando el tiempo de conmutación óptimo de la colonia que has descubiert
 <p>Se sabe que algunas especies (por ejemplo, las abejas) forman enjambres o se levantan y abandonan la colmena, ya que los reproductores inician nuevas colonias en mitad de la temporada. Modele este comportamiento con los parámetros, $b= 0,0013$, $c = 1$, $\mu = 0,022$, $v = 0,005$, $T = 205- días$, y $R(t) = 50$. A continuación, compare esto con sus resultados (es decir, el número de reproductores disponibles al final de la temporada) en su tiempo de cambio óptimo descubierto en la sección Solución bang-bang anterior. Haz las suposiciones adicionales que necesites.</p></div>
 
 <h3 style = "text-align-left"><strong>Resultados</strong></h3></br>
-
-
-
-
+<div align = "justify"><p>Para cada $u(t)$ se obtuvieron las siguientes gráficas de $W(t)$ y $Q(t)$ en el intervalo de tiempo $t = [0, 205]$:</p></div>
+![Modelo OSCI con $u_{1}$](C:/Users/sofia/OneDrive/Documentos/EDO/w_Q_u1.png)
+![Modelo OSCI con $u_{2}$](C:/Users/sofia/OneDrive/Documentos/EDO/W_Q_u2.png)
+![Modelo OSCI con $u_{3}$](C:/Users/sofia/OneDrive/Documentos/EDO/W_Q_u3.png)
 
 
