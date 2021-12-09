@@ -11,14 +11,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-<div style = "background-color:WhiteSmoke; color:black;padding:10px;">
-<h5 style = "text-align-left"><strong>Resumen</strong></h5>
-<p></p>
-<p></p>
-<p></p>
-</div></br>
-
-<h2 style = "text-align-left">**Introducción**</h2>
+## **Introducción**
 <div align="justify">
 <p>En este trabajo se utilizarán las ecuaciones diferenciales ordinarias para modelar la propagación / sobrevivencia de las colonias de insectos. El estudio de los ciclos de vida de las colonias ha dado pie a la creencia de que la colonia, aparentemente, maximiza el número de insectos reproductores al final de la temporada. Lo anterior permite que la colonia esparza sus genes, propagando así a los de su tipo en una moda óptima. Pueden considerarse diferentes modelos para el estudio de insectos hibernantes y no hibernantes. Sin embargo, el caso de los no hibernantes es más complejo debio a la necesidad de construir recursos substanciales y colmenas para sobrevivir al invierno.</p>
 <p>A constinuación se considerará un modelo para una colinia en la que estudiamos dos tipos de insectos propios de la misma, obreros y reproductores (reinas). Sea $W(t)$ el número de insectos obreros en la colonia al tiempo $t$ (el cual se mide en días de la temporada), mientras que $Q(t)$ corresponde al número de insectos reproductores (reinas) en la colonia al tiempo $t$. Para este estudio, no vamos a suponer ninguna distinción de clase de edad.</p>
@@ -47,8 +40,9 @@ knitr::opts_chunk$set(echo = TRUE)
 <div align = "justify">Consideremos estos valores de los parámetros: $b = 0.0013$, $c = 1$, $\mu= 0.022$, $v = 0.005$, $T = 205$ días y $R(t) = 50$. Recordemos que $u(t)$ es una función (en este caso, llamada función de control admisible, en realidad) que está entre 0 y 1, donde $u(t) = 0$, significa que en el tiempo $t$ la colonia pone el 0% de sus energías en la producción de obreras; $u(t) = 1$, significa que en el tiempo $t$ la colonia pone el $100%$ de sus energías en la producción de obreras; y, por ejemplo, $u(140) = 0.31$, significa que en el tiempo $t= 140$ la colonia pone el $31%$ de sus energías en la producción de obreras.</div>
 
 
-<h2 style = "text-align-left">**Metodología**</h2></br>
-<div align="justify">1. Probaremos el modelo propuesto en $(1)$, usando diferentes $u(t)$. Para ello, primeramente graficaremos cada $u(t)$ en el intervalo $[0, 205]$. En segundo lugar, describiremos el comportamiento de la colonia. A continuación, calcularemos el número de insectos reina al final de la temporada y graficaremos ambos $Q(t)$ y $W(t)$ en el intervalo $[0, 205]$ - con variables identificadas.</div></br>
+## **Metodología**
+<div align="justify">Este trabajo se desarrollará utilzando el software Mathematica y el lenguaje de programación R dentro del entorno de RStudio. Los pasos a seguir son:</br>
+1. Probaremos el modelo propuesto en $(1)$, usando diferentes $u(t)$. Para ello, primeramente graficaremos cada $u(t)$ en el intervalo $[0, 205]$. En segundo lugar, describiremos el comportamiento de la colonia. A continuación, calcularemos el número de insectos reina al final de la temporada y graficaremos ambos $Q(t)$ y $W(t)$ en el intervalo $[0, 205]$ - con variables identificadas.</div></br>
 
 <div align="justify">2. Propondremos una estrategia diferente, la cual modelaremos con una función $u(t)$.</div></br>
 
@@ -64,62 +58,115 @@ b) Utilizando el tiempo de conmutación óptimo de la colonia que se obtenga en 
 
 <div align="justify">6. Se sabe que algunas especies (por ejemplo, las abejas) forman enjambres o se levantan y abandonan la colmena, ya que los reproductores inician nuevas colonias en mitad de la temporada. Modele este comportamiento con los parámetros, $b= 0,0013$, $c = 1$, $\mu = 0,022$, $v = 0,005$, $T = 205- días$, y $R(t) = 50$. A continuación, compararemos esto con nuestros resultados (es decir, el número de reproductores disponibles al final de la temporada) en su tiempo de cambio óptimo descubierto en la sección 3 anterior. Haremos las suposiciones adicionales necesarias.</div></br>
 
-<h2 style = "text-align-left">**Resultados**</h2></br>
+## **Resultados y discusión**
+### **Modelando las propuestas de función de utilización**
 <div align = "justify">De las $u(t)$ propuestas, se obtuvieron las siguientes gráficas al evaluar las funciones en el intervalo $t = [0, 205]$:</div>
 
-<center>
 
-![$u_{1}$](C:/Users/sofia/OneDrive/Documentos/EDO/u1.png)
+![$u_{1}$](C:/Users/sofia/OneDrive/Documentos/EDO/u1.jpg)
 
-</center>
+
+![$u_{2}$](C:/Users/sofia/OneDrive/Documentos/EDO/u2.jpg)
+
+
+![$u_{3}$](C:/Users/sofia/OneDrive/Documentos/EDO/u3.jpg)
 
 
 <div align = "justify"> En la Figura 1 la función $u(t) = 0.5 + 0.5 sin(\frac{\pi}{205}t)$ se comporta parabólicamente, proponiendo que para la mitad de la temporada, la colonia ya ha utilizado el 100 % de los recursos. Luego, el procentaje de consumo va a la baja en lo que resta de la temporada.</div></br>
 
-
-<center>
-
-![$u_{2}$](C:/Users/sofia/OneDrive/Documentos/EDO/2.png)
-
-</center>
-
-
 <div align = "justify"> Mientras tanto, en la Figura 2 la utilización de recursos, resultado de la función $u_{2}(t)$, sigue un comportamiento lineal, tendiendo a aumentar el uso de recursos conforme avanza la temporada.  </div></br>
-
-
-<center>
-
-![$u_{3}$](C:/Users/sofia/OneDrive/Documentos/EDO/u3.png)
-
-</center>
-
 
 <div align = "justify"> Finalmente, en la Figura 3 observamos que la colonia hace uso del 100 % de los recursos desde el principio, decrementando el porcentaje de utilización conforme avanza la temporada. Este comportamiento ha sido planteado por la función $u_{3}(t)$. </div>
 
+<div align = "justify"> Nosotros proponemos la función de utilización $u_{4} = \frac{2t}{250}$ proyectando que la colonia ocupe todos sus recursos al principio y llegue a 0 despues de los primeros 100 días. $u(t)$.</div>
 
+![$u_{4}$](C:/Users/sofia/OneDrive/Documentos/EDO/u4.jpg)
+
+
+### **Modelando Q y W dada la función de utilización**
 <div align = "justify">Para cada $u(t)$ se obtuvieron las siguientes gráficas de $W(t)$ y $Q(t)$ en el intervalo de tiempo $t = [0, 205]$:</div>
-<center>
+
 
 ![Modelo OSCI con $u_{1}$](C:/Users/sofia/OneDrive/Documentos/EDO/wq_u1.jpeg)
 
-</center>
-<div align = "justify"> Utilizando $u_{1}(t)$ en las soluciones de las ecuaciones propuestas $(1)$ y evaluando dichas soluciones en el intervalo de tiempo $t =[0,205]$ obtenemos las gráficas que se presentan en la figura 4. Notemos que el número de abejas obreras empieza a crecer aproximadamente a los 75 días de haber iniciado la temporada. Por otro lado, la producción de abejas reina comienza cerca del día 125 de la temporada. Por último, las gráficas muestran que la producción diaria de insectos obreras es mayor que la de insectos reina. </div>
-
-<center>
-
 ![Modelo OSCI con $u_{2}$](C:/Users/sofia/OneDrive/Documentos/EDO/qw_u2.jpeg)
-
-</center>
-
-<div align = "justify"> De forma contrastante, la figura 5 presenta comportamientos muy diferentes para la producción de los insectos obrera y reina. Primeramente, la producción de obreras deciende en los primeros 50 días, luego se mantiene constante y finalmente empieza a crecer a partir del día 100. Por el contrario, la producción de insectos reina siempre va aumentando, aunque a diferentes ritmos.  </div>
-
-<center>
 
 ![Modelo OSCI con $u_{3}$](C:/Users/sofia/OneDrive/Documentos/EDO/qw_u3.jpeg)
 
-</center>
+![Modelo OSCI con $u_{4}$](C:/Users/sofia/OneDrive/Documentos/EDO/u4t.jpeg)
+
+<div align = "justify"> Utilizando $u_{1}(t)$ en las soluciones de las ecuaciones propuestas $(1)$ y evaluando dichas soluciones en el intervalo de tiempo $t =[0,205]$ obtenemos las gráficas que se presentan en la figura 4. Notemos que el número de abejas obreras empieza a crecer aproximadamente a los 75 días de haber iniciado la temporada. Por otro lado, la producción de abejas reina comienza cerca del día 125 de la temporada. Por último, las gráficas muestran que la producción diaria de insectos obreras es mayor que la de insectos reina. </div>
+
+<div align = "justify"> De forma contrastante, la figura 5 presenta comportamientos muy diferentes para la producción de los insectos obrera y reina. Primeramente, la producción de obreras deciende en los primeros 50 días, luego se mantiene constante y finalmente empieza a crecer a partir del día 100. Por el contrario, la producción de insectos reina siempre va aumentando, aunque a diferentes ritmos.  </div>
 
 <div align = "justify"> El modelo que utliza $u_{3}(t)$ muestra que la colonia va a la alta en producción de obreras hasta antes del día 125, mismo día a partir del que empieza a bajar dicha producción hasta el final de la temporada. Ahora bien, la colonia no produce reinas sino hasta el día 50, siguiendo una tendencia a la alta hasta el final de la temporada. Notemos que el máximo de obreras producidas al día son cerca de 20, mientras que de reinas son alrededor de 59. </div>
 
-<h2 style = "text-align-left">**Referencias**</h2></br>
+<div align = "justify"> Por último, nuestra propuesta $u_{4}(t)$ indica que la producción de obreras se maximizará en el día 100, mientras que la de reinas en el día 125. Después de esos días, ambas gráficas van a la baja. </div>
+
+
+### **Producción de insectos y solución particular**
+<div align = "justify"> Después de realizar las operaciones necesarias (Anexo I), establecemos las siguientes soluciones para las ecuaciones diferenciales en $(1)$. Para saber cómo cambia el número de insectos obreras con respecto al tiempo:</div> </br>
+<div align = "center"> $W(t)=e^{t(b \cdot R(t)\cdot u(t)-\mu)}$</br>
+
+<div align = "justify">Y otra para saber cómo cambia el número de reinas a través del tiempo:</div></br> 
+<div align = "center">$Q(t)=\frac{b \cdot c \cdot (2-u(t)) \cdot R(t)}{(b \cdot R(t) \cdot u(t))-(\mu + v)}[e^{t(b \cdot \cdot R(t) \cdot u(t) - \mu)}-e^{-vt}]$</div></br>
+
+<div align = "justify"> Ambas expresiones tienen un factor muy importante que nos habla de la cantidad de recursos que la colonia usa para las reinas, el factor $u(t)$, que puede tomar los valores 1 o 0. Si $u(t)$ toma el valor de 1 indica que la colonia usa el 100% de su energía en la producción de obreras, mientras que si toma el valor de 0, nos indica que la colonia uso el 0% de su energía en la producción de obreras. Como este valor es muy importante, vamos a analizar que pasa en los dos casos particulares, cuando $u(t)=0$,  $u(t)=1$. </div> </br>
+
+<div align = "justify">Como podemos observar, el crecimiento de obreros $W(t)$ y reinas $Q(t)$ tiende a mostrar similitudes cuando $u(t)=1$, sin embargo, no es del todo correcto, ya que hay un crecimiento abismal cuando no hay casi reinas para procrear.Estimamos que esto sucede ya que la ecuación diferencial que determina el crecimiento de la población en insectos obreros, no considera el papel de las reinas $Q(t)$, lo que podría ocasionar esta situación.</div>
+
+![Número de abejas obreraras usando $u(t) = 0$](C:/Users/sofia/OneDrive/Documentos/EDO/nao.jpg)
+
+![Número de abejas obreras usando $u(t) = 1$](C:/Users/sofia/OneDrive/Documentos/EDO/nao.1.jpg)
+
+![Número de abejas reina usando $u(t) = 0$](C:/Users/sofia/OneDrive/Documentos/EDO/nar.jpg)
+
+![Número de abejas reina usando $u(t) = 0$](C:/Users/sofia/OneDrive/Documentos/EDO/nar.1.jpg)
+
+
+
+
+###**Graficas de Q(t) cuando se cambia c**
+
+<div align = "justify"><p>Con base en las gráficas anteriores generadas a partir de la bang-bang solution, se llega a la conclusión de que cuando la cantidad de recursos destinados a la producción de obreras es igual a cero $(u(t) = 0)$, la producción de abejas reina se optimiza, mientras que cuando los recursos a la producción de obreras es 1 $(u(t) = 1)$, la producción de abejas reina es casi nula.
+En el caso anterior, el tiempo $t_{s}$ que define una mayor producción de abejas reina es 205 con $u(t)=0$.</p>
+
+<p>En comparación con los otros procesos, la solución propuesta por bang-bang solution, plantea una mayor producción de reinas al final de la temporada cuando el recurso para la producción de obreras es cero. Por otro lado, también plantea una mínima producción de reinas (que no llega ni a una) cuando los recursos destinados a la producción de obreras es uno. Es decir, este modelo muestra una de las propuestas que maximiza la producción de abejas reina al final de una temporada, sin embargo, queda a discusión la afinidad que tiene con la realidad, ya que toma valores absolutos.</p></div>
+
+![Número de abejas reina usando $c = 1$](C:/Users/sofia/OneDrive/Documentos/EDO/c1.jpg)
+
+![Número de abejas reina usando $c = 2$](C:/Users/sofia/OneDrive/Documentos/EDO/c2.jpg)
+
+![Número de abejas reina usando $c = 0.5$](C:/Users/sofia/OneDrive/Documentos/EDO/c05.jpg)
+
+
+<div align = "justify">Al variar este factor de conversión diferencial se observa que tiene relevancia directa en el número de reinas que se producen en la colonia. Al tener $c=1$, asumiendo que se requieren los mismo recursos para producir una reina y una abeja obrera, tenemos que como máximo se producirían 8 abejas reinas. Al pasar a la siguiente gráfica y tomar $c=2$, es decir, se requiere el doble de recursos para producir una reina en comparación a una abeja obrera, notamos que la producción de abejas aumenta al doble, 16. Finalmente, al tener $c=\frac{1}{2}$, la cantidad de abejas reinas se ve reducida a solo 4.</div>
+
+<div align = "justify">En resumen:</br>
+- Al modificar el valor de $c = 1$, estamos frente a la situación en la que para producir un insecto reproductor, se requiere la misma energía empleada para producir un insecto trabajador.
+- Al modificar el valor de $c = 2$, estamos frente a la situación en la que se requiere 2 veces más energía para producir un insecto reproductor que uno trabajador.
+- Al modificar el valor de $c = \frac{1}{2}$, estamos frente a la situación en la que para producir un insecto reproductor, se requiere la mitad de la energía empleada para producir un insecto trabajador.</div>
+
+### **Cambio de $R(t)$**
+<div align = "justify">Al considerar la variación de recursos en el periodo de primavera temprana a otoño tardío, se asume que la disponibilidad de recursos disminuye, por lo que se plantea la siguiente relación:</br>$R(t)=e^{-t}$</div>
+
+
+### **Nuevas condiciones que implican que las abejas reinas dejan la colmena a mitad de la temporada**
+<div align = "justify"><p>El comportamiento observado al introducir nuevos parámetros muestra una disminución en la población de abejas reina aproximadamente a la mitad de la temporada, sin embargo, la producción tiende a subir, lo que implica que la producción de abejas reina sigue sucediendo.</p>
+<p>En comparación con los resultados del procedimiento 3, Podemos observar que las 8 abejas reinas que se produjeron al final de la temporada, muestran el total que nacieron esa colmena, sin embargo, no considera el comportamiento descrito en este apartado donde algunas se marchan durante la temporada.</p>
+</div>
+
+
+## **Referencias**
 - Soeteart, K., Petzoldt, T., Setzer, W. (2010). *Package deSolve: Solving Intial Value Differential Equations in R* Recuperado el 08 de Diciembre, de sitio web: <https://cran.r-project.org/web/packages/deSolve/vignettes/deSolve.pdf>
+
+## **Anexos**
+
+**I. Cálculo de Q y W**
+Resolviendo manualmente: </br>
+
+![Resolviendo para $W(t)$](C:/Users/sofia/OneDrive/Documentos/EDO/1.jpeg)
+
+![Resolviendo para $Q(t)$](C:/Users/sofia/OneDrive/Documentos/EDO/2.jpeg)
+
+![Resolviendo $Q(t)$](C:/Users/sofia/OneDrive/Documentos/EDO/3.jpeg)

@@ -11,8 +11,8 @@ state <- c(W = 1, Q = 0)
 Osci <- function(t,state, parameters){
   with(as.list(c(state, parameters)),{
     # taza de cambio
-    dW <- (b * (1 - (t/205)) * R * W) - (mu * W)
-    dQ <- (b * c * (1 - (1-(t/205))) * R * W) - (v * Q) 
+    dW <- (b * (1-(2*t/205)) * R * W) - (mu * W)
+    dQ <- (b * c * (1 - (1-(2*t/205))) * R * W) - (v * Q) 
     
     # Retorna tazas de cambio
     list(c(dW, dQ))
@@ -31,3 +31,9 @@ head(out)
 par(oma = c(0,0,3,0))
 plot(out, xlab = "Días de la temporada", ylab = "Producción de insectos")
 mtext(outer = TRUE, side = 3, "Modelo OSCI", cex = 1.5)
+
+# Con el método de Euler
+oute <- ode(y = state, times = times, func = Osci, parms = parameters, method = "euler", hini = 0.01)
+plot(oute)
+
+
