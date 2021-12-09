@@ -11,8 +11,8 @@ state <- c(W = 1, Q = 0)
 Osci <- function(t,state, parameters){
   with(as.list(c(state, parameters)),{
     # taza de cambio
-    dW <- (b * (t/205) * R * W) - (mu * W)
-    dQ <- (b * c * (1 - (t/205)) * R * W) - (v * Q) 
+    dW <- (b * (1 - (t/205)) * R * W) - (mu * W)
+    dQ <- (b * c * (1 - (1-(t/205))) * R * W) - (v * Q) 
     
     # Retorna tazas de cambio
     list(c(dW, dQ))

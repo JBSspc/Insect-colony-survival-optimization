@@ -103,23 +103,23 @@ b) Utilizando el tiempo de conmutación óptimo de la colonia que se obtenga en 
 ![Modelo OSCI con $u_{1}$](C:/Users/sofia/OneDrive/Documentos/EDO/wq_u1.jpeg)
 
 </center>
-<div align = "justify"> Utilizando $u_{1}(t)$ en las soluciones de las ecuaciones propuestas $(1)$ y evaluando dichas soluciones en el intervalo de tiempo $t =[0,205]$ obtenemos las gráficas que se presentan en la Figura 4. Notemos que el número de abejas obreras empieza a crecer aproximadamente a los 75 días de haber iniciado la temporada. Por otro lado, la producción de abejas reina comienza cerca del día 125 de la temporada. Por último, las gráficas muestran que la producción diaria de insectos obreras es mayor que la de insectos reina. </div>
+<div align = "justify"> Utilizando $u_{1}(t)$ en las soluciones de las ecuaciones propuestas $(1)$ y evaluando dichas soluciones en el intervalo de tiempo $t =[0,205]$ obtenemos las gráficas que se presentan en la figura 4. Notemos que el número de abejas obreras empieza a crecer aproximadamente a los 75 días de haber iniciado la temporada. Por otro lado, la producción de abejas reina comienza cerca del día 125 de la temporada. Por último, las gráficas muestran que la producción diaria de insectos obreras es mayor que la de insectos reina. </div>
 
 <center>
 
-![Modelo OSCI con $u_{2}$](C:/Users/sofia/OneDrive/Documentos/EDO/W_Q_u2.png)
+![Modelo OSCI con $u_{2}$](C:/Users/sofia/OneDrive/Documentos/EDO/qw_u2.jpeg)
 
 </center>
 
-<div align = "justify"> En este caso, podemos ver que...COMPLETAR </div>
+<div align = "justify"> De forma contrastante, la figura 5 presenta comportamientos muy diferentes para la producción de los insectos obrera y reina. Primeramente, la producción de obreras deciende en los primeros 50 días, luego se mantiene constante y finalmente empieza a crecer a partir del día 100. Por el contrario, la producción de insectos reina siempre va aumentando, aunque a diferentes ritmos.  </div>
 
 <center>
 
-![Modelo OSCI con $u_{3}$](C:/Users/sofia/OneDrive/Documentos/EDO/W_Q_u3.png)
+![Modelo OSCI con $u_{3}$](C:/Users/sofia/OneDrive/Documentos/EDO/qw_u3.jpeg)
 
 </center>
 
-<div align = "justify"> En este caso, podemos ver que...COMPLETAR </div>
+<div align = "justify"> El modelo que utliza $u_{3}(t)$ muestra que la colonia va a la alta en producción de obreras hasta antes del día 125, mismo día a partir del que empieza a bajar dicha producción hasta el final de la temporada. Ahora bien, la colonia no produce reinas sino hasta el día 50, siguiendo una tendencia a la alta hasta el final de la temporada. Notemos que el máximo de obreras producidas al día son cerca de 20, mientras que de reinas son alrededor de 59. </div>
 
 <h2 style = "text-align-left">**Referencias**</h2></br>
 - Soeteart, K., Petzoldt, T., Setzer, W. (2010). *Package deSolve: Solving Intial Value Differential Equations in R* Recuperado el 08 de Diciembre, de sitio web: <https://cran.r-project.org/web/packages/deSolve/vignettes/deSolve.pdf>
