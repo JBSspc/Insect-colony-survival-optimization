@@ -11,8 +11,8 @@ state <- c(W = 1, Q = 0)
 Osci <- function(t,state, parameters){
   with(as.list(c(state, parameters)),{
     # taza de cambio
-    dW <- (b * (0.5 + (0.5*sin((pi/205)*t))) * R * W) - (mu * W)
-    dQ <- (b * c * (1 - (0.5 + (0.5*sin((pi/205)*t)))) * R * W) - (v * Q) 
+    dW <- (b * (t/205) * R * W) - (mu * W)
+    dQ <- (b * c * (1 - (t/205)) * R * W) - (v * Q) 
     
     # Retorna tazas de cambio
     list(c(dW, dQ))
@@ -29,5 +29,5 @@ head(out)
 
 # Graficando los resultados
 par(oma = c(0,0,3,0))
-plot(out, xlab = "Días de la temporada", ylab = "% utilización")
+plot(out, xlab = "Días de la temporada", ylab = "Producción de insectos")
 mtext(outer = TRUE, side = 3, "Modelo OSCI", cex = 1.5)

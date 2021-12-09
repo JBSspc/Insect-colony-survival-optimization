@@ -3,8 +3,8 @@ title: "Optimización de la supervivencia de las colonias de insectos"
 author: "Sofía Palacios Cuevas, Martín Morales Trejo"
 date: "Diciembre 07, 2021"
 output:
-  html_document: default
   pdf_document: default
+  html_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -73,7 +73,9 @@ b) Utilizando el tiempo de conmutación óptimo de la colonia que se obtenga en 
 
 </center>
 
-<div align = "justify"> En este caso, podemos ver que...COMPLETAR </div>
+
+<div align = "justify"> En la Figura 1 la función $u(t) = 0.5 + 0.5 sin(\frac{\pi}{205}t)$ se comporta parabólicamente, proponiendo que para la mitad de la temporada, la colonia ya ha utilizado el 100 % de los recursos. Luego, el procentaje de consumo va a la baja en lo que resta de la temporada.</div></br>
+
 
 <center>
 
@@ -81,7 +83,9 @@ b) Utilizando el tiempo de conmutación óptimo de la colonia que se obtenga en 
 
 </center>
 
-<div align = "justify"> En este caso, podemos ver que...COMPLETAR </div>
+
+<div align = "justify"> Mientras tanto, en la Figura 2 la utilización de recursos, resultado de la función $u_{2}(t)$, sigue un comportamiento lineal, tendiendo a aumentar el uso de recursos conforme avanza la temporada.  </div></br>
+
 
 <center>
 
@@ -89,16 +93,17 @@ b) Utilizando el tiempo de conmutación óptimo de la colonia que se obtenga en 
 
 </center>
 
-<div align = "justify"> En este caso, podemos ver que...COMPLETAR </div>
+
+<div align = "justify"> Finalmente, en la Figura 3 observamos que la colonia hace uso del 100 % de los recursos desde el principio, decrementando el porcentaje de utilización conforme avanza la temporada. Este comportamiento ha sido planteado por la función $u_{3}(t)$. </div>
 
 
 <div align = "justify">Para cada $u(t)$ se obtuvieron las siguientes gráficas de $W(t)$ y $Q(t)$ en el intervalo de tiempo $t = [0, 205]$:</div>
 <center>
 
-![Modelo OSCI con $u_{1}$](C:/Users/sofia/OneDrive/Documentos/EDO/w_Q_u1.png)
+![Modelo OSCI con $u_{1}$](C:/Users/sofia/OneDrive/Documentos/EDO/wq_u1.jpeg)
 
 </center>
-<div align = "justify"> En este caso, podemos ver que...COMPLETAR </div>
+<div align = "justify"> Utilizando $u_{1}(t)$ en las soluciones de las ecuaciones propuestas $(1)$ y evaluando dichas soluciones en el intervalo de tiempo $t =[0,205]$ obtenemos las gráficas que se presentan en la Figura 4. Notemos que el número de abejas obreras empieza a crecer aproximadamente a los 75 días de haber iniciado la temporada. Por otro lado, la producción de abejas reina comienza cerca del día 125 de la temporada. Por último, las gráficas muestran que la producción diaria de insectos obreras es mayor que la de insectos reina. </div>
 
 <center>
 
